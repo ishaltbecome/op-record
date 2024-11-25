@@ -1,0 +1,27 @@
+{
+  "name": "op-record",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishaltbecome/op-record.git"
+  },
+  "author": "Nikolay Ivanchenko <ishaltbecome@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ishaltbecome/op-record/issues"
+  },
+  "homepage": "https://github.com/ishaltbecome/op-record#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "sequelize": "^6.37.5",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^5.1.7"
+  }
+}
