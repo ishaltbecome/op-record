@@ -19,7 +19,7 @@ exports.User = sequelize.define("user", {
 
 exports.Post = sequelize.define("post", {
     date: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     title: {

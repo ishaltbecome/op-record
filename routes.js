@@ -12,4 +12,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/posts", async (req, res) => {
+  try {
+    const posts = await models.Post.findAll();
+    res.render("posts", { title: "Posts", posts });
+  } catch (err) {
+    console.error(err);
+    res.json(err);
+  }
+});
+
 module.exports = router;
