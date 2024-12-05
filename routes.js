@@ -13,9 +13,16 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/posts", async (req, res) => {
+  const post = undefined;
+  res.render("posts", { title: "Posts", post });
+});
+
+router.get("/posts/:inputDate", async (req, res) => {
   try {
-    const posts = await models.Post.findAll();
-    res.render("posts", { title: "Posts", posts });
+    const post = await models.Post.findOne({where: {date: req.params.inputDate}});
+    res.render("posts", { title: "Posts", post });
+    console.log(post.dataValues);
+    
   } catch (err) {
     console.error(err);
     res.json(err);
